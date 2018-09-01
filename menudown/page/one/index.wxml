@@ -1,0 +1,14 @@
+<!--page/one/index.wxml-->
+<view class="page">
+    <view class="nav-son" bindtap="listpx">
+        <view>我的下拉列表</view>
+        <image src='{{imgUrl}}'></image>
+    </view>
+
+    <view class="temp {{pxopen ? 'slidown' : 'slidup'}} {{pxshow ? 'disappear':''}}">
+        <view wx:for="{{content}}">
+            {{item}}
+        </view>
+    </view>
+</view>
+<button>按钮</button>

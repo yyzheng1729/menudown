@@ -1,0 +1,71 @@
+/* 下拉列表的样式 */
+.nav-son{
+    position: relative;
+    /* 让下拉提示信息永远放于下拉内容的上面 */
+    z-index: 99;
+    border-top: 1px solid #d1d3d4;
+    border-bottom: 1px solid #d1d3d4;
+    background: #fff;
+    display: flex;
+    height: 40px;
+    align-items:center;
+    font-size: 18px;
+}
+/* 下拉列表 下三角的样式 */
+.nav-son image{
+    position: absolute;
+    right: 30rpx;
+    width: 50rpx;
+    height: 50rpx;
+}
+
+/* 下拉框的样式 */
+.temp{
+    /* 默认为不显示 */
+    display:none;
+    /* 下拉框的宽度， */
+    width: 100%;
+    /* 下拉框的最大高度 */
+    max-height: 750rpx;
+    overflow-y: scroll;
+    padding: 0 0 0 20rpx;
+    line-height:100rpx;
+    background: #fff;
+}
+
+/* 下拉框内容的样式 */
+.temp view{
+    border-bottom: 1px solid #d1d3d4;
+    font-size: 14px;
+    color: #666;
+}
+
+/* 下拉动画 */
+/* @keyframes Css3 新标签，循环动画 */
+@keyframes slidown{
+    from{
+        transform:  translateY(-100%);
+    }
+    to{
+        transform:  translateY(0%);
+    }
+}
+.slidown{
+    display: block;
+    animation: slidown .2s ease-in both;
+}
+
+/* 上拉动画 */
+@keyframes slidup{
+    from{
+        transform:  translateY(0%);
+    }
+    to{
+        transform:  translateY(-100%);
+    }
+}
+.slidup{
+    display: block;
+    animation: slidup .2s ease-in both;
+    height: 0px;
+}
